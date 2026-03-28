@@ -6,11 +6,11 @@
     <meta name="theme-color" content="#000000">
     
     <!-- SEO Tags -->
-    <title>Password Entropy Calculator | Check Password Strength & Security | PassGen Pro</title>
+    <title>Password Entropy Calculator | Check Password Strength | Free Online Password Generator</title>
     <meta name="description" content="Free online password entropy calculator to measure your password strength. Calculate bits of entropy, crack time, and get security recommendations. Protect your accounts from brute force attacks.">
     <meta name="keywords" content="password entropy calculator, password strength checker, entropy calculator, password security meter, brute force protection, password bits calculator, NIST password guidelines, strong password checker">
     <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="author" content="PassGen Pro">
+    <meta name="author" content="Free Online Password Generator">
     <link rel="canonical" href="https://password.pandacybercafe.in/entropy-calculator.html" />
 
     <!-- Open Graph / Facebook -->
@@ -18,7 +18,7 @@
     <meta property="og:url" content="https://password.pandacybercafe.in/entropy-calculator.html">
     <meta property="og:title" content="Password Entropy Calculator | Check Password Strength">
     <meta property="og:description" content="Calculate password entropy and check how secure your password is against brute force attacks. Free online password strength meter with entropy analysis.">
-    <meta property="og:site_name" content="PassGen Pro">
+    <meta property="og:site_name" content="Free Online Password Generator">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -26,8 +26,12 @@
     <meta property="twitter:title" content="Password Entropy Calculator">
     <meta property="twitter:description" content="Check your password strength with entropy calculation and crack time estimation.">
 
-    <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23000000'/%3E%3Ctext x='50' y='68' font-size='60' text-anchor='middle' fill='white' font-weight='bold'%3EP%3C/text%3E%3C/svg%3E">
+    <!-- Favicons - Correct URLs -->
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
 
     <!-- Schema Markup -->
     <script type="application/ld+json">
@@ -93,8 +97,8 @@
             --text-light: #525252;
             --bg-color: #ffffff;
             --line-color: #e5e7eb;
-            --footer-bg: #0f172a;
-            --footer-text: #94a3b8;
+            --footer-bg: #000000;
+            --footer-text: #9ca3af;
             --success: #16a34a;
             --error: #ef4444;
             --warning: #f59e0b;
@@ -144,10 +148,10 @@
         }
 
         .logo-text {
-            font-size: 24px;
+            font-size: 20px;
             font-weight: 800;
             color: var(--text-main);
-            letter-spacing: -0.8px;
+            letter-spacing: -0.5px;
         }
 
         .free-badge {
@@ -491,13 +495,14 @@
             transform: rotate(180deg);
         }
 
-        /* Footer */
+        /* Footer - BLACK THEME */
         footer {
-            background-color: var(--footer-bg);
-            color: var(--footer-text);
+            background-color: #000000;
+            color: #9ca3af;
             padding: 60px 0 25px;
             margin-top: 70px;
             font-size: 14px;
+            border-top: 1px solid #1f1f1f;
         }
 
         .footer-grid {
@@ -510,7 +515,7 @@
         }
 
         .footer-col h5 {
-            color: white;
+            color: #ffffff;
             font-size: 15px;
             font-weight: 700;
             margin-bottom: 18px;
@@ -518,7 +523,7 @@
 
         .footer-brand p {
             font-size: 13px;
-            color: #94a3b8;
+            color: #9ca3af;
             line-height: 1.6;
             margin-top: 12px;
             max-width: 300px;
@@ -537,7 +542,7 @@
         }
 
         .footer-logo-text {
-            font-size: 20px;
+            font-size: 18px;
             font-weight: 800;
             color: white;
             letter-spacing: -0.5px;
@@ -554,14 +559,14 @@
         }
 
         .footer-links a {
-            color: #cbd5e1;
+            color: #9ca3af;
             text-decoration: none;
             transition: 0.2s;
             display: inline-block;
         }
 
         .footer-links a:hover {
-            color: white;
+            color: #ffffff;
             padding-left: 3px;
         }
 
@@ -569,13 +574,13 @@
             max-width: 1100px;
             margin: 40px auto 0;
             padding-top: 20px;
-            border-top: 1px solid #334155;
+            border-top: 1px solid #1f1f1f;
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding-left: 25px;
             padding-right: 25px;
-            color: #64748b;
+            color: #6b7280;
             font-size: 12px;
         }
 
@@ -598,6 +603,9 @@
             .result-value {
                 font-size: 28px;
             }
+            .logo-text {
+                font-size: 16px;
+            }
         }
     </style>
 </head>
@@ -618,7 +626,7 @@
                         <path d="M75,75 V85 M65,75 V80" stroke="#000" stroke-width="4" />
                     </svg>
                 </div>
-                <div class="logo-text">Password</div>
+                <div class="logo-text">Free Online Password Generator</div>
             </a>
             <span class="free-badge">Free Tool | Secure</span>
         </div>
@@ -748,16 +756,6 @@
         </ul>
         <p>Our entropy calculator follows these NIST guidelines to accurately assess password strength based on length and character diversity.</p>
 
-        <h2>Common Password Patterns to Avoid</h2>
-        <ul>
-            <li><strong>Keyboard patterns:</strong> "qwerty123", "asdfgh", "1qaz2wsx" - extremely low entropy</li>
-            <li><strong>Dictionary words:</strong> Any word in the dictionary reduces entropy significantly</li>
-            <li><strong>Personal information:</strong> Birthdays, pet names, anniversaries are easily guessed</li>
-            <li><strong>Common substitutions:</strong> "P@ssw0rd" - hackers know these tricks</li>
-            <li><strong>Repeated patterns:</strong> "abcabcabc", "111111" - predictable and weak</li>
-            <li><strong>Seasonal passwords:</strong> "Winter2026", "Summer2025" - common patterns</li>
-        </ul>
-
         <h2>Password Entropy Comparison by Length</h2>
         <div class="entropy-table">
             <table>
@@ -775,15 +773,6 @@
                 </tbody>
             </table>
         </div>
-
-        <h2>Why Password Entropy Matters for Your Security</h2>
-        <p>In 2026, cyber threats are more sophisticated than ever. AI-powered password cracking tools can attempt billions of guesses per second. Password entropy is the mathematical measure that determines how long your password would survive such an attack:</p>
-        <ul>
-            <li><strong>40-bit entropy:</strong> Can be cracked in seconds with modern GPUs</li>
-            <li><strong>60-bit entropy:</strong> Vulnerable within days using cloud computing resources</li>
-            <li><strong>80-bit entropy:</strong> Would take thousands of years with current technology</li>
-            <li><strong>100+ bit entropy:</strong> Mathematically impossible to crack before the heat death of the universe</li>
-        </ul>
 
         <h2>Frequently Asked Questions About Password Entropy</h2>
         
@@ -821,14 +810,6 @@
 
         <div class="faq-item">
             <div class="faq-question" onclick="toggleFaq(this)">
-                Can quantum computers break passwords with high entropy?
-                <i data-lucide="chevron-down" class="faq-icon"></i>
-            </div>
-            <div class="faq-answer">Quantum computers using Grover's algorithm could theoretically reduce the effective entropy by half. A password with 128 bits of classical entropy would have about 64 bits of quantum resistance. This is why our entropy calculator shows 128+ bits as the target for future-proof security against quantum attacks.</div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
                 How does password entropy relate to brute force attacks?
                 <i data-lucide="chevron-down" class="faq-icon"></i>
             </div>
@@ -843,17 +824,6 @@
             <div class="faq-answer">Yes. Length has an exponential effect on entropy while complexity has a linear effect. A 20-character lowercase password has about 94 bits of entropy, while a 12-character password with all character types has only 78 bits. This is why NIST recommends focusing on length rather than arbitrary complexity rules.</div>
         </div>
 
-        <div class="faq-item">
-            <div class="faq-question" onclick="toggleFaq(this)">
-                How accurate is this entropy calculator?
-                <i data-lucide="chevron-down" class="faq-icon"></i>
-            </div>
-            <div class="faq-answer">Our calculator provides mathematically accurate entropy calculations based on character set size and length. However, real-world password strength also depends on whether the password appears in breach databases or follows predictable patterns. We recommend using our companion password generator to create truly random passwords with maximum entropy.</div>
-        </div>
-
-        <h2>Conclusion: Take Control of Your Password Security</h2>
-        <p>Understanding password entropy is the first step toward better security. Use our entropy calculator to audit your existing passwords and identify weaknesses. For maximum protection, combine high-entropy passwords (100+ bits) with two-factor authentication and a reputable password manager. Your digital security is in your hands—make every bit count.</p>
-        
         <div class="info-box">
             <strong>Security Checklist:</strong><br><br>
             ✓ Use passwords with 80+ bits of entropy for most accounts<br>
@@ -881,7 +851,7 @@
                             <path d="M75,75 V85 M65,75 V80" stroke="#fff" stroke-width="5" />
                         </svg>
                     </div>
-                    <div class="footer-logo-text">Password</div>
+                    <div class="footer-logo-text">Free Online Password Generator</div>
                 </a>
                 <p>Professional free online password generator and entropy calculator. Create secure, random passwords and check their strength instantly. 100% client-side security.</p>
             </div>
@@ -897,8 +867,8 @@
                 <h5>Tools</h5>
                 <ul class="footer-links">
                     <li><a href="password-generator.html">Password Generator</a></li>
+                    <li><a href="password-checker.html">Password Strength Checker</a></li>
                     <li><a href="entropy-calculator.html">Entropy Calculator</a></li>
-                    <li><a href="strong-password.html">Strong Password Checker</a></li>
                 </ul>
             </div>
             <div class="footer-col">
@@ -919,8 +889,8 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div>&copy; 2026 PassGen Pro. All rights reserved.</div>
-            <div>Password entropy calculator | Security analysis tool</div>
+            <div>&copy; 2026 Free Online Password Generator. All rights reserved.</div>
+            <div>🔐 Password entropy calculator | Security analysis tool</div>
         </div>
     </footer>
 
