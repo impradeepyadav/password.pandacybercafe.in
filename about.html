@@ -2,28 +2,29 @@
 <html lang="en" itemscope itemtype="https://schema.org/AboutPage">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <!-- Enhanced viewport for perfect mobile & desktop scaling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, shrink-to-fit=no, viewport-fit=cover">
     <meta name="theme-color" content="#000000">
     
-    <!-- SEO Tags -->
-    <title>About Us - Free Online Password Generator | PassGen Pro</title>
-    <meta name="description" content="Learn about Free Online Password Generator, the most secure client-side password generator. Our mission for a safer web with zero-knowledge architecture, privacy-first approach, and enterprise-grade security.">
-    <meta name="keywords" content="free online password generator about, password generator about, secure password tool, cybersecurity mission, zero-knowledge architecture, privacy first">
+    <!-- SEO Tags (Updated to Password Generator) -->
+    <title>About Us - Password Generator | Secure Client-Side Tool</title>
+    <meta name="description" content="Learn about Password Generator, the most secure client-side password generator. Our mission for a safer web with zero-knowledge architecture, privacy-first approach, and enterprise-grade security.">
+    <meta name="keywords" content="password generator about, secure password tool, cybersecurity mission, zero-knowledge architecture, privacy first, free online password generator about">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="Free Online Password Generator">
+    <meta name="author" content="Password Generator">
     <link rel="canonical" href="https://password.pandacybercafe.in/about.html" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://password.pandacybercafe.in/about.html">
-    <meta property="og:title" content="About Free Online Password Generator - Secure Password Tool">
-    <meta property="og:description" content="Learn about Free Online Password Generator, the most secure client-side password generator with zero-knowledge architecture.">
-    <meta property="og:site_name" content="Free Online Password Generator">
+    <meta property="og:title" content="About Password Generator - Secure Password Tool">
+    <meta property="og:description" content="Learn about Password Generator, the most secure client-side password generator with zero-knowledge architecture.">
+    <meta property="og:site_name" content="Password Generator">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://password.pandacybercafe.in/about.html">
-    <meta property="twitter:title" content="About Free Online Password Generator">
+    <meta property="twitter:title" content="About Password Generator">
     <meta property="twitter:description" content="Our mission for a safer web with zero-knowledge password generation.">
 
     <!-- Favicons - Correct URLs -->
@@ -33,17 +34,17 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <!-- Schema Markup -->
+    <!-- Schema Markup (Updated) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "AboutPage",
-      "name": "About Free Online Password Generator",
+      "name": "About Password Generator",
       "url": "https://password.pandacybercafe.in/about.html",
-      "description": "Learn about Free Online Password Generator, the most secure client-side password generator.",
+      "description": "Learn about Password Generator, the most secure client-side password generator.",
       "publisher": {
         "@type": "Organization",
-        "name": "Free Online Password Generator"
+        "name": "Password Generator"
       }
     }
     </script>
@@ -92,6 +93,11 @@
             --error: #ef4444;
         }
 
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background-color: var(--bg-color);
@@ -111,10 +117,11 @@
             padding: 15px 0;
             border-bottom: 1px solid var(--line-color);
             background: white;
+            width: 100%;
         }
 
         .navbar {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
             display: flex;
@@ -154,7 +161,7 @@
 
         /* Main Container */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             width: 100%;
             margin: 30px auto;
             padding: 0 20px;
@@ -162,15 +169,16 @@
         }
 
         h1 {
-            font-size: 38px;
+            font-size: clamp(28px, 5vw, 38px);
             font-weight: 800;
             margin-bottom: 20px;
             line-height: 1.2;
             letter-spacing: -0.5px;
+            word-break: break-word;
         }
 
         h2 {
-            font-size: 26px;
+            font-size: clamp(22px, 4vw, 28px);
             font-weight: 700;
             border-bottom: 2px solid var(--line-color);
             padding-bottom: 10px;
@@ -179,7 +187,7 @@
         }
 
         h3 {
-            font-size: 20px;
+            font-size: clamp(18px, 3vw, 22px);
             font-weight: 700;
             margin-top: 28px;
             margin-bottom: 12px;
@@ -190,7 +198,7 @@
             line-height: 1.7;
             color: var(--text-light);
             margin-bottom: 18px;
-            font-size: 16px;
+            font-size: clamp(15px, 2.5vw, 16px);
         }
 
         ul {
@@ -241,10 +249,11 @@
             margin-top: 70px;
             font-size: 14px;
             border-top: 1px solid #1f1f1f;
+            width: 100%;
         }
 
         .footer-grid {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 25px;
             display: grid;
@@ -309,7 +318,7 @@
         }
 
         .footer-bottom {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 40px auto 0;
             padding-top: 20px;
             border-top: 1px solid #1f1f1f;
@@ -320,26 +329,42 @@
             padding-right: 25px;
             color: #6b7280;
             font-size: 12px;
+            flex-wrap: wrap;
         }
 
-        @media (max-width: 768px) {
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
             .footer-grid {
                 grid-template-columns: 1fr;
-                gap: 35px;
+                gap: 25px;
             }
             .footer-bottom {
                 flex-direction: column;
                 gap: 12px;
                 text-align: center;
             }
-            h1 {
-                font-size: 28px;
+            .navbar {
+                flex-wrap: wrap;
+                gap: 10px;
             }
-            h2 {
-                font-size: 22px;
+            .brand-logo {
+                flex-wrap: wrap;
             }
             .logo-text {
-                font-size: 16px;
+                font-size: 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
             }
         }
     </style>
@@ -361,7 +386,7 @@
                         <path d="M75,75 V85 M65,75 V80" stroke="#000" stroke-width="4" />
                     </svg>
                 </div>
-                <div class="logo-text">Free Online Password Generator</div>
+                <div class="logo-text">Password Generator</div>
             </a>
             <span class="free-badge">Free Tool | Secure</span>
         </div>
@@ -373,19 +398,19 @@
             <i data-lucide="arrow-left" size="18"></i> Back to Password Generator
         </a>
         
-        <h1>About Free Online Password Generator: Our Mission for a Safer Web</h1>
+        <h1>About Password Generator: Our Mission for a Safer Web</h1>
         
         <div class="content-block">
             <p><strong>Last Updated: March 2026</strong></p>
             
-            <p>Welcome to <strong>Free Online Password Generator</strong>. We are a dedicated team of cybersecurity professionals and developers who believe that digital privacy is a fundamental right. Our mission is to provide enterprise-grade security tools that are accessible to everyone, completely free, and built on a foundation of transparency and trust.</p>
+            <p>Welcome to <strong>Password Generator</strong>. We are a dedicated team of cybersecurity professionals and developers who believe that digital privacy is a fundamental right. Our mission is to provide enterprise-grade security tools that are accessible to everyone, completely free, and built on a foundation of transparency and trust.</p>
             
             <div class="highlight-box">
                 <strong>Our Core Belief:</strong> Strong security shouldn't be complicated or expensive. Every internet user deserves access to tools that protect their digital identity without compromising privacy.
             </div>
             
-            <h2>Why We Started Free Online Password Generator</h2>
-            <p>Most online password generators are either cluttered with intrusive ads, collect user data, or worse—send your generated passwords to remote servers. We saw a gap in the market for a truly private, client-side password generator that puts user security first. Free Online Password Generator was born from the simple idea that password generation should happen entirely on your device, with zero data transmission, zero tracking, and zero compromises.</p>
+            <h2>Why We Started Password Generator</h2>
+            <p>Most online password generators are either cluttered with intrusive ads, collect user data, or worse—send your generated passwords to remote servers. We saw a gap in the market for a truly private, client-side password generator that puts user security first. Password Generator was born from the simple idea that password generation should happen entirely on your device, with zero data transmission, zero tracking, and zero compromises.</p>
             
             <h2>Our Technology Philosophy</h2>
             <p>We prioritize "Client-Side First" development. By running all password generation logic in your browser's memory, we eliminate the risk of interception during transmission. Our tool uses the <strong>Web Crypto API</strong>—the industry standard for cryptographically secure random number generation—ensuring that every password is truly random and unpredictable.</p>
@@ -399,7 +424,7 @@
             </ul>
             
             <h2>What Makes Us Different</h2>
-            <p>In a sea of online tools, Free Online Password Generator stands out for our unwavering commitment to privacy and security:</p>
+            <p>In a sea of online tools, Password Generator stands out for our unwavering commitment to privacy and security:</p>
             <ul>
                 <li><strong>True Randomness:</strong> Using cryptographically secure random number generation, not pseudo-random algorithms.</li>
                 <li><strong>Open Standards Compliance:</strong> Following NIST SP 800-63B password guidelines.</li>
@@ -409,7 +434,7 @@
             </ul>
             
             <h2>Our Commitment to Transparency</h2>
-            <p>Free Online Password Generator believes that security through obscurity is not security at all. Unlike proprietary password generators that hide their algorithms, we welcome scrutiny from the security community. Our password generation logic is based on publicly documented standards using the Web Crypto API, ensuring that anyone can verify how we create random passwords.</p>
+            <p>Password Generator believes that security through obscurity is not security at all. Unlike proprietary password generators that hide their algorithms, we welcome scrutiny from the security community. Our password generation logic is based on publicly documented standards using the Web Crypto API, ensuring that anyone can verify how we create random passwords.</p>
             
             <div class="highlight-box">
                 <strong>Security Promise:</strong> We make the following guarantees:<br><br>
@@ -421,7 +446,7 @@
             </div>
             
             <h2>Our Security Research Contributions</h2>
-            <p>The Free Online Password Generator team actively contributes to the cybersecurity community through research and education:</p>
+            <p>The Password Generator team actively contributes to the cybersecurity community through research and education:</p>
             <ul>
                 <li>Research on AI-powered password cracking techniques</li>
                 <li>Contributions to password security best practices</li>
@@ -431,7 +456,7 @@
             </ul>
             
             <h2>Our Team</h2>
-            <p>Free Online Password Generator is developed and maintained by a small, passionate team of security engineers and frontend developers who believe in privacy-first tools. We come from diverse backgrounds in cybersecurity, software engineering, and cryptography, united by a common goal: making the internet safer for everyone.</p>
+            <p>Password Generator is developed and maintained by a small, passionate team of security engineers and frontend developers who believe in privacy-first tools. We come from diverse backgrounds in cybersecurity, software engineering, and cryptography, united by a common goal: making the internet safer for everyone.</p>
             <p>We are not funded by venture capital or corporate interests. Our independence allows us to prioritize user privacy above all else, without pressure to monetize user data or compromise on security.</p>
             
             <h2>Why We Don't Track You</h2>
@@ -446,11 +471,11 @@
             <p>We believe that security tools should practice what they preach. If we're asking you to create secure passwords, we must also demonstrate security in how we operate.</p>
             
             <h2>Join Our Mission</h2>
-            <p>Help us spread the word about online security. Share Free Online Password Generator with friends, family, and colleagues. Every strong password generated is a step toward a safer internet. Together, we can make password security accessible to everyone, without compromising privacy.</p>
-            <p>If you have questions, feedback, or want to collaborate, we'd love to hear from you. Reach out through our contact page—we're committed to making Free Online Password Generator better with community input.</p>
+            <p>Help us spread the word about online security. Share Password Generator with friends, family, and colleagues. Every strong password generated is a step toward a safer internet. Together, we can make password security accessible to everyone, without compromising privacy.</p>
+            <p>If you have questions, feedback, or want to collaborate, we'd love to hear from you. Reach out through our contact page—we're committed to making Password Generator better with community input.</p>
             
             <div class="highlight-box">
-                <strong>Stay Secure. Stay Private. Use Free Online Password Generator.</strong>
+                <strong>Stay Secure. Stay Private. Use Password Generator.</strong>
             </div>
         </div>
     </main>
@@ -471,7 +496,7 @@
                             <path d="M75,75 V85 M65,75 V80" stroke="#fff" stroke-width="5" />
                         </svg>
                     </div>
-                    <div class="footer-logo-text">Free Online Password Generator</div>
+                    <div class="footer-logo-text">Password Generator</div>
                 </a>
                 <p>Professional free online password generator. Create secure, random, and private keys instantly. 100% client-side security with zero-knowledge architecture.</p>
             </div>
@@ -509,13 +534,13 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div>&copy; 2026 Free Online Password Generator. All rights reserved.</div>
+            <div>&copy; 2026 Password Generator. All rights reserved.</div>
             <div>🔐 Client-side password generator | Zero data storage</div>
         </div>
     </footer>
 
     <script>
-        // Disable right-click and developer tools shortcuts
+        // Disable right-click and developer tools shortcuts (Optional)
         document.addEventListener('contextmenu', e => e.preventDefault());
         document.addEventListener('keydown', e => {
             if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
