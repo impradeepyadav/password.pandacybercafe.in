@@ -2,15 +2,16 @@
 <html lang="en" itemscope itemtype="https://schema.org/WebApplication">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <!-- Enhanced viewport for perfect mobile & desktop scaling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, shrink-to-fit=no, viewport-fit=cover">
     <meta name="theme-color" content="#000000">
     
-    <!-- SEO Tags -->
-    <title>Password Entropy Calculator | Check Password Strength | Free Online Password Generator</title>
+    <!-- SEO Tags (Updated to Password Generator) -->
+    <title>Password Entropy Calculator | Check Password Strength | Password Generator</title>
     <meta name="description" content="Free online password entropy calculator to measure your password strength. Calculate bits of entropy, crack time, and get security recommendations. Protect your accounts from brute force attacks.">
     <meta name="keywords" content="password entropy calculator, password strength checker, entropy calculator, password security meter, brute force protection, password bits calculator, NIST password guidelines, strong password checker">
     <meta name="robots" content="index, follow, max-image-preview:large">
-    <meta name="author" content="Free Online Password Generator">
+    <meta name="author" content="Password Generator">
     <link rel="canonical" href="https://password.pandacybercafe.in/entropy-calculator.html" />
 
     <!-- Open Graph / Facebook -->
@@ -18,7 +19,7 @@
     <meta property="og:url" content="https://password.pandacybercafe.in/entropy-calculator.html">
     <meta property="og:title" content="Password Entropy Calculator | Check Password Strength">
     <meta property="og:description" content="Calculate password entropy and check how secure your password is against brute force attacks. Free online password strength meter with entropy analysis.">
-    <meta property="og:site_name" content="Free Online Password Generator">
+    <meta property="og:site_name" content="Password Generator">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
@@ -33,7 +34,7 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <!-- Schema Markup -->
+    <!-- Schema Markup (Updated) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -43,7 +44,8 @@
       "description": "Calculate password entropy and strength against brute force attacks.",
       "applicationCategory": "SecurityApplication",
       "operatingSystem": "All",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+      "publisher": { "@type": "Organization", "name": "Password Generator" }
     }
     </script>
     
@@ -104,6 +106,11 @@
             --warning: #f59e0b;
         }
 
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background-color: var(--bg-color);
@@ -123,10 +130,11 @@
             padding: 15px 0;
             border-bottom: 1px solid var(--line-color);
             background: white;
+            width: 100%;
         }
 
         .navbar {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
             display: flex;
@@ -166,7 +174,7 @@
 
         /* Main Container */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             width: 100%;
             margin: 30px auto;
             padding: 0 20px;
@@ -174,15 +182,16 @@
         }
 
         h1 {
-            font-size: 38px;
+            font-size: clamp(28px, 5vw, 38px);
             font-weight: 800;
             margin-bottom: 15px;
             line-height: 1.2;
             letter-spacing: -0.5px;
+            word-break: break-word;
         }
 
         h2 {
-            font-size: 28px;
+            font-size: clamp(22px, 4vw, 28px);
             font-weight: 700;
             border-bottom: 2px solid var(--line-color);
             padding-bottom: 10px;
@@ -191,7 +200,7 @@
         }
 
         h3 {
-            font-size: 22px;
+            font-size: clamp(18px, 3vw, 22px);
             font-weight: 700;
             margin-top: 30px;
             margin-bottom: 15px;
@@ -199,7 +208,7 @@
         }
 
         h4 {
-            font-size: 18px;
+            font-size: clamp(16px, 2.5vw, 18px);
             font-weight: 600;
             margin-top: 20px;
             margin-bottom: 10px;
@@ -210,11 +219,11 @@
             line-height: 1.7;
             color: var(--text-light);
             margin-bottom: 18px;
-            font-size: 16px;
+            font-size: clamp(15px, 2.5vw, 16px);
         }
 
         p.subtitle {
-            font-size: 18px;
+            font-size: clamp(15px, 2.5vw, 18px);
             color: var(--text-light);
             margin-bottom: 35px;
             line-height: 1.6;
@@ -288,9 +297,21 @@
         /* Results Section */
         .results-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
             margin-bottom: 30px;
+        }
+
+        @media (max-width: 600px) {
+            .results-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .results-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         .result-card {
@@ -310,7 +331,7 @@
         }
 
         .result-value {
-            font-size: 36px;
+            font-size: clamp(24px, 5vw, 36px);
             font-weight: 800;
             color: var(--primary);
             line-height: 1.2;
@@ -363,7 +384,7 @@
         }
 
         .crack-value {
-            font-size: 24px;
+            font-size: clamp(20px, 4vw, 24px);
             font-weight: 800;
             color: var(--primary);
         }
@@ -402,21 +423,21 @@
 
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
             gap: 20px;
             margin: 30px 0;
         }
 
         .stat-card {
             background: #f8fafc;
-            padding: 20px;
+            padding: 20px 10px;
             border-radius: 12px;
             text-align: center;
             border: 1px solid #e5e7eb;
         }
 
         .stat-number {
-            font-size: 32px;
+            font-size: clamp(24px, 5vw, 32px);
             font-weight: 800;
             color: #000;
         }
@@ -432,6 +453,7 @@
             margin: 25px 0;
             border: 1px solid var(--line-color);
             border-radius: 12px;
+            -webkit-overflow-scrolling: touch;
         }
 
         table {
@@ -503,10 +525,11 @@
             margin-top: 70px;
             font-size: 14px;
             border-top: 1px solid #1f1f1f;
+            width: 100%;
         }
 
         .footer-grid {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 25px;
             display: grid;
@@ -571,7 +594,7 @@
         }
 
         .footer-bottom {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 40px auto 0;
             padding-top: 20px;
             border-top: 1px solid #1f1f1f;
@@ -582,29 +605,49 @@
             padding-right: 25px;
             color: #6b7280;
             font-size: 12px;
+            flex-wrap: wrap;
         }
 
-        @media (max-width: 768px) {
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
             .footer-grid {
                 grid-template-columns: 1fr;
-                gap: 35px;
+                gap: 25px;
             }
             .footer-bottom {
                 flex-direction: column;
                 gap: 12px;
                 text-align: center;
             }
-            h1 {
-                font-size: 28px;
+            .navbar {
+                flex-wrap: wrap;
+                gap: 10px;
             }
-            h2 {
-                font-size: 24px;
-            }
-            .result-value {
-                font-size: 28px;
+            .brand-logo {
+                flex-wrap: wrap;
             }
             .logo-text {
+                font-size: 18px;
+            }
+            .tool-card {
+                padding: 20px 15px;
+            }
+            #passwordInput {
+                padding: 15px;
                 font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
             }
         }
     </style>
@@ -626,7 +669,7 @@
                         <path d="M75,75 V85 M65,75 V80" stroke="#000" stroke-width="4" />
                     </svg>
                 </div>
-                <div class="logo-text">Free Online Password Generator</div>
+                <div class="logo-text">Password Generator</div>
             </a>
             <span class="free-badge">Free Tool | Secure</span>
         </div>
@@ -851,7 +894,7 @@
                             <path d="M75,75 V85 M65,75 V80" stroke="#fff" stroke-width="5" />
                         </svg>
                     </div>
-                    <div class="footer-logo-text">Free Online Password Generator</div>
+                    <div class="footer-logo-text">Password Generator</div>
                 </a>
                 <p>Professional free online password generator and entropy calculator. Create secure, random passwords and check their strength instantly. 100% client-side security.</p>
             </div>
@@ -889,7 +932,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div>&copy; 2026 Free Online Password Generator. All rights reserved.</div>
+            <div>&copy; 2026 Password Generator. All rights reserved.</div>
             <div>🔐 Password entropy calculator | Security analysis tool</div>
         </div>
     </footer>
