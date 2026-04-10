@@ -2,28 +2,29 @@
 <html lang="en" itemscope itemtype="https://schema.org/WebPage">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <!-- Enhanced viewport for perfect mobile & desktop scaling -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, shrink-to-fit=no, viewport-fit=cover">
     <meta name="theme-color" content="#000000">
     
-    <!-- SEO Tags -->
-    <title>Privacy Policy - Free Online Password Generator</title>
-    <meta name="description" content="Read Free Online Password Generator's privacy policy. Zero-knowledge architecture, 100% client-side password generation. Your data never leaves your device. GDPR, CCPA, and Google AdSense compliant.">
-    <meta name="keywords" content="privacy policy, free online password generator privacy, secure password generator privacy, zero-knowledge architecture, GDPR, CCPA, data protection, Google AdSense">
+    <!-- SEO Tags (Updated to Password Generator) -->
+    <title>Privacy Policy - Password Generator</title>
+    <meta name="description" content="Read Password Generator's privacy policy. Zero-knowledge architecture, 100% client-side password generation. Your data never leaves your device. GDPR, CCPA, and Google AdSense compliant.">
+    <meta name="keywords" content="privacy policy, password generator privacy, secure password generator privacy, zero-knowledge architecture, GDPR, CCPA, data protection, Google AdSense">
     <meta name="robots" content="index, follow">
-    <meta name="author" content="Free Online Password Generator">
+    <meta name="author" content="Password Generator">
     <link rel="canonical" href="https://password.pandacybercafe.in/privacy.html" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://password.pandacybercafe.in/privacy.html">
-    <meta property="og:title" content="Privacy Policy - Free Online Password Generator">
-    <meta property="og:description" content="Read Free Online Password Generator's privacy policy. Zero-knowledge architecture, 100% client-side.">
-    <meta property="og:site_name" content="Free Online Password Generator">
+    <meta property="og:title" content="Privacy Policy - Password Generator">
+    <meta property="og:description" content="Read Password Generator's privacy policy. Zero-knowledge architecture, 100% client-side.">
+    <meta property="og:site_name" content="Password Generator">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://password.pandacybercafe.in/privacy.html">
-    <meta property="twitter:title" content="Privacy Policy - Free Online Password Generator">
+    <meta property="twitter:title" content="Privacy Policy - Password Generator">
     <meta property="twitter:description" content="Zero-knowledge architecture, 100% client-side.">
 
     <!-- Favicons - Correct URLs -->
@@ -33,17 +34,17 @@
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
 
-    <!-- Schema Markup -->
+    <!-- Schema Markup (Updated) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebPage",
       "name": "Privacy Policy",
       "url": "https://password.pandacybercafe.in/privacy.html",
-      "description": "Free Online Password Generator privacy policy - 100% client-side password generation.",
+      "description": "Password Generator privacy policy - 100% client-side password generation.",
       "publisher": {
         "@type": "Organization",
-        "name": "Free Online Password Generator"
+        "name": "Password Generator"
       }
     }
     </script>
@@ -92,6 +93,11 @@
             --error: #ef4444;
         }
 
+        html, body {
+            width: 100%;
+            overflow-x: hidden;
+        }
+
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background-color: var(--bg-color);
@@ -111,10 +117,11 @@
             padding: 15px 0;
             border-bottom: 1px solid var(--line-color);
             background: white;
+            width: 100%;
         }
 
         .navbar {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
             display: flex;
@@ -154,7 +161,7 @@
 
         /* Main Container */
         .container {
-            max-width: 1100px;
+            max-width: 1200px;
             width: 100%;
             margin: 30px auto;
             padding: 0 20px;
@@ -162,15 +169,16 @@
         }
 
         h1 {
-            font-size: 38px;
+            font-size: clamp(28px, 5vw, 38px);
             font-weight: 800;
             margin-bottom: 20px;
             line-height: 1.2;
             letter-spacing: -0.5px;
+            word-break: break-word;
         }
 
         h2 {
-            font-size: 26px;
+            font-size: clamp(22px, 4vw, 28px);
             font-weight: 700;
             border-bottom: 2px solid var(--line-color);
             padding-bottom: 10px;
@@ -179,7 +187,7 @@
         }
 
         h3 {
-            font-size: 20px;
+            font-size: clamp(18px, 3vw, 22px);
             font-weight: 700;
             margin-top: 25px;
             margin-bottom: 12px;
@@ -190,7 +198,7 @@
             line-height: 1.7;
             color: var(--text-light);
             margin-bottom: 18px;
-            font-size: 16px;
+            font-size: clamp(15px, 2.5vw, 16px);
         }
 
         ul, ol {
@@ -249,10 +257,11 @@
             margin-top: 70px;
             font-size: 14px;
             border-top: 1px solid #1f1f1f;
+            width: 100%;
         }
 
         .footer-grid {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 25px;
             display: grid;
@@ -317,7 +326,7 @@
         }
 
         .footer-bottom {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 40px auto 0;
             padding-top: 20px;
             border-top: 1px solid #1f1f1f;
@@ -328,26 +337,45 @@
             padding-right: 25px;
             color: #6b7280;
             font-size: 12px;
+            flex-wrap: wrap;
         }
 
-        @media (max-width: 768px) {
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 30px 20px;
+            }
+        }
+
+        @media (max-width: 600px) {
             .footer-grid {
                 grid-template-columns: 1fr;
-                gap: 35px;
+                gap: 25px;
             }
             .footer-bottom {
                 flex-direction: column;
                 gap: 12px;
                 text-align: center;
             }
-            h1 {
-                font-size: 28px;
+            .navbar {
+                flex-wrap: wrap;
+                gap: 10px;
             }
-            h2 {
-                font-size: 22px;
+            .brand-logo {
+                flex-wrap: wrap;
             }
             .logo-text {
-                font-size: 16px;
+                font-size: 18px;
+            }
+            .privacy-note, .adsense-note {
+                padding: 16px 18px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
             }
         }
     </style>
@@ -369,7 +397,7 @@
                         <path d="M75,75 V85 M65,75 V80" stroke="#000" stroke-width="4" />
                     </svg>
                 </div>
-                <div class="logo-text">Free Online Password Generator</div>
+                <div class="logo-text">Password Generator</div>
             </a>
             <span class="free-badge">Free Tool | Secure</span>
         </div>
@@ -387,7 +415,7 @@
             <p><strong>Effective Date: March 2026</strong> | <strong>Last Updated: March 2026</strong></p>
             
             <div class="privacy-note">
-                <strong>🔐 Zero-Knowledge Architecture:</strong> At Free Online Password Generator, we take a radical approach to privacy. If we don't collect it, we can't lose it.
+                <strong>🔐 Zero-Knowledge Architecture:</strong> At Password Generator, we take a radical approach to privacy. If we don't collect it, we can't lose it.
             </div>
 
             <div class="adsense-note">
@@ -444,7 +472,7 @@
             <h2>7. Zero-Knowledge Architecture Explained</h2>
             <p>Our zero-knowledge architecture means that we literally cannot see your passwords even if we wanted to. Here's how it works:</p>
             <ol>
-                <li>You visit Free Online Password Generator in your browser</li>
+                <li>You visit Password Generator in your browser</li>
                 <li>The JavaScript code downloads to your device</li>
                 <li>Your browser generates random numbers using the Web Crypto API</li>
                 <li>The password is created using these random numbers</li>
@@ -493,19 +521,19 @@
             </ul>
             
             <h2>11. Children's Privacy</h2>
-            <p>Free Online Password Generator does not knowingly collect any information from children under 13. If you believe a child has provided personal information, please contact us immediately and we will take appropriate action.</p>
+            <p>Password Generator does not knowingly collect any information from children under 13. If you believe a child has provided personal information, please contact us immediately and we will take appropriate action.</p>
             
             <h2>12. Changes to This Policy</h2>
-            <p>We may update this privacy policy occasionally to reflect changes in our practices or legal requirements. The updated version will be posted here with a revised date. Your continued use of Free Online Password Generator after changes constitutes acceptance of the updated policy.</p>
+            <p>We may update this privacy policy occasionally to reflect changes in our practices or legal requirements. The updated version will be posted here with a revised date. Your continued use of Password Generator after changes constitutes acceptance of the updated policy.</p>
             
             <h2>13. Contact Us</h2>
             <p>If you have questions about this privacy policy, our data practices, or Google AdSense, please contact us:</p>
             <ul>
-                <li>Email: <strong>privacy@freeonlinepasswordgenerator.com</strong></li>
+                <li>Email: <strong>privacy@passwordgenerator.com</strong></li>
                 <li>Response time: 24-48 hours</li>
             </ul>
             
-            <p><em>By using Free Online Password Generator, you acknowledge that you have read and understood this privacy policy.</em></p>
+            <p><em>By using Password Generator, you acknowledge that you have read and understood this privacy policy.</em></p>
         </div>
     </main>
 
@@ -525,7 +553,7 @@
                             <path d="M75,75 V85 M65,75 V80" stroke="#fff" stroke-width="5" />
                         </svg>
                     </div>
-                    <div class="footer-logo-text">Free Online Password Generator</div>
+                    <div class="footer-logo-text">Password Generator</div>
                 </a>
                 <p>Professional free online password generator. Create secure, random, and private keys instantly. 100% client-side security with zero-knowledge architecture.</p>
             </div>
@@ -563,13 +591,13 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div>&copy; 2026 Free Online Password Generator. All rights reserved.</div>
+            <div>&copy; 2026 Password Generator. All rights reserved.</div>
             <div>🔐 Client-side password generator | Zero data storage</div>
         </div>
     </footer>
 
     <script>
-        // Disable right-click and developer tools shortcuts
+        // Disable right-click and developer tools shortcuts (Optional)
         document.addEventListener('contextmenu', e => e.preventDefault());
         document.addEventListener('keydown', e => {
             if (e.key === 'F12' || (e.ctrlKey && e.shiftKey && e.key === 'I')) {
