@@ -45,7 +45,7 @@
 
         /* ========== HEADER ========== */
         header {
-            background: white; border-bottom: 3px solid var(--eco-primary);
+            background: white; border-bottom: 2px solid #e0e0e0;
             box-shadow: 0 2px 8px rgba(0,0,0,0.02); width: 100%; z-index: 1500;
         }
         .header-top {
@@ -130,21 +130,96 @@
             -webkit-overflow-scrolling: touch; background: #ffffff;
         }
 
-        /* ========== HERO ========== */
+        /* ========== HERO SECTION - REDESIGNED ========== */
         .hero-section {
-            max-width: 1200px; margin: var(--spacing-lg) auto; padding: 0 var(--spacing-xl);
-            display: grid; grid-template-columns: 1.2fr 0.9fr; gap: var(--spacing-xl); align-items: center;
+            max-width: 1200px; margin: var(--spacing-3xl) auto; padding: 0 var(--spacing-xl);
+            display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-4xl); align-items: center;
         }
-        .hero-content h1 { font-size: clamp(28px, 6vw, 48px); font-weight: 800; color: #000000; line-height: 1.2; margin-bottom: var(--spacing-sm); }
-        .hero-highlight { background: #e8f0ec; padding: 0 var(--spacing-sm); border-left: 6px solid var(--success); color: #000000; }
-        .hero-content p { color: #333333; font-size: clamp(1rem, 3vw, 1.2rem); margin-bottom: var(--spacing-md); }
-        .btn-hero-primary {
-            background: #000000; color: white; padding: 14px 28px; border-radius: 48px;
-            font-weight: 700; display: inline-flex; align-items: center; gap: var(--spacing-sm); text-decoration: none;
-            font-size: clamp(0.9rem, 3vw, 1rem);
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 6vw, 3.5rem); font-weight: 800; color: #000000;
+            line-height: 1.2; margin-bottom: var(--spacing-lg); letter-spacing: -0.02em;
         }
-        .hero-card { background: #000000; border-radius: 24px; padding: var(--spacing-2xl) var(--spacing-lg); color: white; }
-        .preview-password { font-family: 'Monaco', 'Consolas', monospace; font-size: clamp(1.3rem, 5vw, 1.8rem); color: #ffffff; word-break: break-all; }
+        .hero-highlight {
+            background: linear-gradient(135deg, #e8f0ec 0%, #d4e5dc 100%);
+            padding: 0 var(--spacing-sm); border-left: 6px solid var(--success);
+            color: #000000; display: inline-block;
+        }
+        .hero-description {
+            color: #333333; font-size: 1.1rem; line-height: 1.7;
+            margin-bottom: var(--spacing-xl); max-width: 500px;
+        }
+        .hero-features {
+            display: flex; flex-wrap: wrap; gap: var(--spacing-lg) var(--spacing-2xl);
+            margin-bottom: var(--spacing-2xl);
+        }
+        .hero-feature-item {
+            display: flex; align-items: center; gap: var(--spacing-sm);
+            color: #000000; font-weight: 500; font-size: 0.95rem;
+        }
+        .hero-feature-item i {
+            width: 22px; height: 22px; color: var(--success);
+        }
+        .hero-actions {
+            display: flex; gap: var(--spacing-md); flex-wrap: wrap;
+        }
+        .btn-primary-large {
+            background: #000000; color: white; padding: 16px 32px; border-radius: 48px;
+            font-weight: 700; display: inline-flex; align-items: center; gap: var(--spacing-sm);
+            text-decoration: none; font-size: 1rem; transition: all 0.15s;
+            border: none; cursor: pointer;
+        }
+        .btn-primary-large:hover {
+            background: #1a1a1a; transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .btn-secondary-large {
+            background: transparent; color: #000000; padding: 16px 32px; border-radius: 48px;
+            font-weight: 700; display: inline-flex; align-items: center; gap: var(--spacing-sm);
+            text-decoration: none; font-size: 1rem; transition: all 0.15s;
+            border: 2px solid #000000;
+        }
+        .btn-secondary-large:hover {
+            background: #f5f5f5;
+        }
+
+        .hero-visual {
+            display: flex; justify-content: center; align-items: center;
+        }
+        .hero-preview-card {
+            background: #000000; border-radius: 28px; padding: var(--spacing-2xl);
+            width: 100%; max-width: 420px; box-shadow: 0 25px 40px -10px rgba(0,0,0,0.2);
+        }
+        .preview-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: var(--spacing-lg);
+        }
+        .preview-label {
+            color: #888888; font-size: 0.8rem; text-transform: uppercase;
+            letter-spacing: 1.5px; font-weight: 600;
+        }
+        .preview-badge {
+            background: var(--success); color: white; padding: 4px 12px;
+            border-radius: 20px; font-size: 0.75rem; font-weight: 700;
+        }
+        .preview-password {
+            font-family: 'Monaco', 'Consolas', monospace; font-size: 1.8rem;
+            font-weight: 700; color: #ffffff; word-break: break-all;
+            line-height: 1.3; margin-bottom: var(--spacing-xl);
+        }
+        .preview-stats {
+            display: grid; grid-template-columns: 1fr 1fr; gap: var(--spacing-lg);
+            border-top: 1px solid #333333; padding-top: var(--spacing-lg);
+        }
+        .preview-stat {
+            text-align: left;
+        }
+        .preview-stat-value {
+            font-size: 1.5rem; font-weight: 700; color: white;
+        }
+        .preview-stat-label {
+            font-size: 0.75rem; color: #888888; text-transform: uppercase;
+            letter-spacing: 0.5px; margin-top: 4px;
+        }
 
         /* PAGE SECTIONS */
         .container { max-width: 1200px; margin: 0 auto var(--spacing-lg); padding: 0 var(--spacing-xl); }
@@ -242,14 +317,15 @@
         }
         .practices-list li { margin-bottom: var(--spacing-md); }
 
-        /* FAQ Section */
-        .faq-grid {
-            display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--spacing-lg);
+        /* FAQ Section - STACKED (LINE BY LINE) */
+        .faq-stack {
+            display: flex; flex-direction: column; gap: var(--spacing-md);
             margin: var(--spacing-2xl) 0;
         }
         .faq-card {
             background: #f8fcf9; border: 1px solid #e0e8e3; border-radius: 16px;
             padding: var(--spacing-xl); cursor: pointer; transition: all 0.15s;
+            width: 100%;
         }
         .faq-card:hover { border-color: var(--success); background: white; }
         .faq-question {
@@ -296,7 +372,7 @@
         .footer-share-header { display: flex; align-items: center; gap: var(--spacing-xs); margin-bottom: var(--spacing-xs); }
         .footer-share-header i { width: 18px; height: 18px; color: var(--success); }
         .footer-share-title { color: #ffffff; font-size: 0.95rem; font-weight: 700; }
-        .footer-share-subtitle { color: #cccccc; font-size: 0.75rem; line-height: 1.3; }
+        .footer-share-subtitle { color: #cccccc; font-size: 0.8rem; line-height: 1.4; }
         .footer-copyright { text-align: center; padding-top: var(--spacing-xl); color: #cccccc; font-size: 0.8rem; }
 
         /* Toast Messages */
@@ -319,13 +395,16 @@
             .header-top { padding: var(--spacing-sm) var(--spacing-lg); }
             .desktop-tool-links { display: none; }
             .menu-icon-btn { display: flex; }
-            .hero-section { grid-template-columns: 1fr; gap: var(--spacing-lg); }
+            .hero-section { grid-template-columns: 1fr; gap: var(--spacing-xl); }
+            .hero-content { text-align: center; }
+            .hero-description { max-width: 100%; }
+            .hero-features { justify-content: center; }
+            .hero-actions { justify-content: center; }
             .config-grid { grid-template-columns: 1fr; }
             .action-buttons { grid-template-columns: 1fr; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
             .tips-grid { grid-template-columns: 1fr; }
             .mistakes-grid { grid-template-columns: 1fr; }
-            .faq-grid { grid-template-columns: 1fr; }
             .footer-unified-grid { grid-template-columns: 1fr; gap: var(--footer-gap); }
             .footer-col { text-align: left; }
         }
@@ -398,17 +477,66 @@
     </div>
 </header>
 
-<!-- HERO -->
+<!-- HERO - REDESIGNED -->
 <section class="hero-section">
     <div class="hero-content">
-        <h1><span class="hero-highlight">Strong</span> passwords.<br>Zero trust.</h1>
-        <p>Cryptographically secure. 100% client-side.</p>
-        <div style="display:flex; gap:15px; margin-bottom:18px; flex-wrap:wrap;"><span><i data-lucide="shield-check"></i> Web Crypto</span><span><i data-lucide="wifi-off"></i> Offline</span></div>
-        <a href="#generator-tool" class="btn-hero-primary"><i data-lucide="key"></i> Generate now</a>
+        <h1>
+            <span class="hero-highlight">Strong</span> passwords.<br>
+            Zero trust. Total security.
+        </h1>
+        <p class="hero-description">
+            Generate cryptographically secure, random passwords instantly. 
+            100% client-side — your secrets never leave your device.
+        </p>
+        <div class="hero-features">
+            <div class="hero-feature-item">
+                <i data-lucide="shield-check"></i>
+                <span>Web Crypto API</span>
+            </div>
+            <div class="hero-feature-item">
+                <i data-lucide="wifi-off"></i>
+                <span>Works Offline</span>
+            </div>
+            <div class="hero-feature-item">
+                <i data-lucide="key"></i>
+                <span>Up to 100 chars</span>
+            </div>
+        </div>
+        <div class="hero-actions">
+            <button class="btn-primary-large" onclick="document.getElementById('generator-tool').scrollIntoView({behavior: 'smooth'})">
+                <i data-lucide="key"></i> Generate Password
+            </button>
+            <button class="btn-secondary-large" onclick="document.getElementById('why-choose').scrollIntoView({behavior: 'smooth'})">
+                <i data-lucide="info"></i> Learn More
+            </button>
+        </div>
     </div>
     <div class="hero-visual">
-        <div class="hero-card"><div style="color:#cccccc;">LIVE PREVIEW</div><div class="preview-password" id="heroPreviewPassword">Kx9#mP2$vL7@qR5</div>
-        <div style="display:grid; grid-template-columns:1fr 1fr; margin-top:18px;"><div><div style="font-size:1.6rem; color:#ffffff;">128+</div><span style="color:#cccccc;">bits</span></div><div><div style="font-size:1.6rem; color:#ffffff;">0</div><span style="color:#cccccc;">stored</span></div></div></div>
+        <div class="hero-preview-card">
+            <div class="preview-header">
+                <span class="preview-label">Live Preview</span>
+                <span class="preview-badge">Secure</span>
+            </div>
+            <div class="preview-password" id="heroPreviewPassword">Kx9#mP2$vL7@qR5</div>
+            <div class="preview-stats">
+                <div class="preview-stat">
+                    <div class="preview-stat-value">128+</div>
+                    <div class="preview-stat-label">Bits Entropy</div>
+                </div>
+                <div class="preview-stat">
+                    <div class="preview-stat-value">94^16</div>
+                    <div class="preview-stat-label">Combinations</div>
+                </div>
+                <div class="preview-stat">
+                    <div class="preview-stat-value">0</div>
+                    <div class="preview-stat-label">Data Stored</div>
+                </div>
+                <div class="preview-stat">
+                    <div class="preview-stat-value">100%</div>
+                    <div class="preview-stat-label">Client-Side</div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -438,7 +566,7 @@
 </div>
 
 <!-- ENHANCED SEO CONTENT -->
-<div class="seo-content">
+<div class="seo-content" id="why-choose">
     <!-- Why Choose Section with Stats -->
     <div class="seo-section">
         <h2>Why Choose Our Password Generator?</h2>
@@ -549,10 +677,10 @@
         </div>
     </div>
 
-    <!-- FAQ Section -->
+    <!-- FAQ Section - STACKED (LINE BY LINE) -->
     <div class="seo-section">
         <h2>Frequently Asked Questions</h2>
-        <div class="faq-grid">
+        <div class="faq-stack">
             <div class="faq-card" onclick="toggleFaqCard(this)">
                 <div class="faq-question">Is Password Generator safe to use? <i data-lucide="chevron-down" class="faq-icon"></i></div>
                 <div class="faq-answer">Yes. Password Generator runs entirely in your browser using the Web Crypto API. No passwords are ever sent to any server. All generation happens locally on your device. We don't store, track, or share any data.</div>
@@ -623,7 +751,7 @@
             </div>
             <div class="footer-col footer-share-compact" onclick="shareWebsite()">
                 <div class="footer-share-header"><i data-lucide="share-2"></i><span class="footer-share-title">Share Us On</span></div>
-                <div class="footer-share-subtitle">Follow Us On Social Media<br>Get Latest Update</div>
+                <div class="footer-share-subtitle">Share with friends and family — help them stay secure online with strong passwords.</div>
             </div>
         </div>
         <div class="footer-copyright">© password.pandacybercafe.in • All rights reserved</div>
