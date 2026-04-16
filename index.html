@@ -62,9 +62,12 @@
         .desktop-tool-links { display: flex; gap: var(--spacing-xl); }
         .desktop-tool-links a {
             color: #000000; text-decoration: none; font-weight: 600; font-size: 0.95rem;
-            border-bottom: 2px solid transparent; padding-bottom: var(--spacing-xs); transition: 0.15s;
+            padding-bottom: var(--spacing-xs);
+            transition: color 0.15s;
         }
-        .desktop-tool-links a:hover { border-bottom-color: var(--success); }
+        .desktop-tool-links a:hover {
+            color: var(--success);
+        }
         .drop-menu { position: relative; }
         .menu-icon-btn {
             background: transparent; border: none; padding: var(--spacing-sm); cursor: pointer;
@@ -115,6 +118,10 @@
             text-decoration: none; padding: var(--spacing-sm) 0;
             display: flex; align-items: center;
             border-bottom: 1px solid #c8dbd1;
+            transition: color 0.15s;
+        }
+        .sidebar-tool-item:hover {
+            color: var(--success);
         }
         .sidebar-tool-item::before {
             content: "—"; color: var(--success); font-weight: 900;
@@ -398,19 +405,34 @@
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
-                <ul><li><a href="#">Home</a></li><li><a href="#">About Us</a></li><li><a href="#">Contact</a></li><li><a href="#">Support</a></li></ul>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                    <li><a href="/support">Support</a></li>
+                </ul>
             </div>
             <div class="footer-col">
                 <h4>Tools</h4>
-                <ul><li><a href="password-generator.html">Password Generator</a></li><li><a href="password-checker.html">Strength Checker</a></li><li><a href="entropy-calculator.html">Entropy Calculator</a></li></ul>
+                <ul>
+                    <li><a href="password-generator.html">Password Generator</a></li>
+                    <li><a href="password-checker.html">Strength Checker</a></li>
+                    <li><a href="entropy-calculator.html">Entropy Calculator</a></li>
+                </ul>
             </div>
             <div class="footer-col">
                 <h4>Resources</h4>
-                <ul><li><a href="#">Security Guide</a></li><li><a href="#">FAQ</a></li><li><a href="#">Blog</a></li></ul>
+                <ul>
+                    <li><a href="/blog">Blog</a></li>
+                </ul>
             </div>
             <div class="footer-col">
                 <h4>Legal</h4>
-                <ul><li><a href="#">Disclaimer</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Use</a></li></ul>
+                <ul>
+                    <li><a href="/disclaimer">Disclaimer</a></li>
+                    <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    <li><a href="/terms-of-use">Terms of Use</a></li>
+                </ul>
             </div>
             <div class="footer-col footer-share-compact" onclick="shareWebsite()">
                 <div class="footer-share-header">
