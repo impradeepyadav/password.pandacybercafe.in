@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, shrink-to-fit=no, viewport-fit=cover">
     <meta name="theme-color" content="#000000">
-    <title>Password Generator • Strong & Secure Passwords | Free Online Tool</title>
+    <title>Password Generator</title>
     <meta name="description" content="Generate strong, cryptographically secure random passwords instantly. Free online password generator with custom length, symbols, numbers. 100% client-side, no data storage.">
     <meta name="robots" content="index, follow, max-image-preview:large">
     <meta name="author" content="Password Generator">
@@ -350,11 +350,87 @@
         .nist-box h4 { font-size: 1.2rem; font-weight: 700; color: #000000; margin-bottom: var(--spacing-md); }
         .nist-box ul { margin-bottom: 0; }
 
-        /* ========== FOOTER - BLACK (6 equal columns, reduced gap, .html links) ========== */
+        /* How to Use Section - Advanced */
+        .how-to-use-steps {
+            display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--spacing-lg);
+            margin: var(--spacing-2xl) 0;
+        }
+        .step-card {
+            background: linear-gradient(135deg, #f8fcf9 0%, #e8f0ec 100%);
+            border: 2px solid #000000; border-radius: 24px; padding: var(--spacing-2xl);
+            position: relative; transition: all 0.3s ease;
+        }
+        .step-card:hover {
+            transform: translateY(-8px); box-shadow: 0 20px 30px rgba(0,0,0,0.15);
+            border-color: var(--success);
+        }
+        .step-number {
+            position: absolute; top: -20px; left: 20px;
+            background: #000000; color: white; width: 40px; height: 40px;
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-weight: 800; font-size: 1.3rem; border: 3px solid var(--success);
+        }
+        .step-icon { width: 40px; height: 40px; color: var(--success); margin: var(--spacing-md) 0; }
+        .step-card h4 { font-size: 1.3rem; font-weight: 700; color: #000000; margin-bottom: var(--spacing-md); }
+        .step-card p { color: #555555; line-height: 1.6; font-size: 0.95rem; margin-bottom: var(--spacing-md); }
+        .step-tip {
+            background: white; padding: var(--spacing-sm) var(--spacing-md); border-radius: 20px;
+            font-size: 0.85rem; color: var(--success); font-weight: 600;
+            border-left: 3px solid var(--success); margin-top: var(--spacing-sm);
+        }
+
+        /* Advanced Features Section - STACKED (LINE BY LINE) */
+        .advanced-features-stack {
+            display: flex; flex-direction: column; gap: var(--spacing-md);
+            margin: var(--spacing-2xl) 0;
+        }
+        .advanced-card {
+            background: #ffffff; border: 1px solid #e0e8e3; border-radius: 20px;
+            padding: var(--spacing-xl); transition: all 0.15s;
+            width: 100%;
+        }
+        .advanced-card:hover { border-color: var(--success); box-shadow: 0 5px 20px rgba(46,125,94,0.1); }
+        .advanced-card h4 {
+            display: flex; align-items: center; gap: var(--spacing-sm);
+            font-size: 1.1rem; font-weight: 700; color: #000000; margin-bottom: var(--spacing-md);
+        }
+        .advanced-card h4 i { width: 24px; height: 24px; color: var(--success); }
+        .advanced-card p { color: #555555; line-height: 1.7; font-size: 0.95rem; margin-bottom: 0; }
+
+        /* Password Formula Box */
+        .formula-box {
+            background: #000000; border-radius: 20px; padding: var(--spacing-2xl);
+            margin: var(--spacing-2xl) 0; color: white;
+        }
+        .formula-box h4 {
+            font-size: 1.3rem; font-weight: 700; margin-bottom: var(--spacing-lg);
+            display: flex; align-items: center; gap: var(--spacing-sm);
+        }
+        .formula-box h4 i { width: 28px; height: 28px; color: var(--success); }
+        .formula-content {
+            font-family: 'Monaco', 'Consolas', monospace; background: #1a1a1a;
+            padding: var(--spacing-xl); border-radius: 12px; border-left: 4px solid var(--success);
+            font-size: 1.1rem; line-height: 1.8; color: #e0e0e0;
+        }
+        .formula-highlight { color: var(--success); font-weight: 700; }
+
+        /* Entropy Calculator Preview */
+        .entropy-preview {
+            display: grid; grid-template-columns: repeat(4, 1fr); gap: var(--spacing-md);
+            margin: var(--spacing-xl) 0;
+        }
+        .entropy-item {
+            text-align: center; padding: var(--spacing-md);
+            background: #f8fcf9; border-radius: 12px;
+        }
+        .entropy-value { font-size: 1.8rem; font-weight: 800; color: #000000; }
+        .entropy-label { font-size: 0.8rem; color: #666666; margin-top: var(--spacing-xs); text-transform: uppercase; letter-spacing: 0.5px; }
+
+        /* ========== FOOTER - BLACK (5 equal columns, Resources removed) ========== */
         footer { background: #000000; color: #ffffff; padding: var(--spacing-2xl) 0 var(--spacing-xl); }
         .footer-container { max-width: 1200px; margin: 0 auto; padding: 0 var(--spacing-xl); }
         .footer-unified-grid {
-            display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--footer-gap);
+            display: grid; grid-template-columns: repeat(5, 1fr); gap: var(--footer-gap);
             margin-bottom: var(--spacing-2xl); padding-bottom: var(--spacing-2xl); border-bottom: 1px solid #333333;
         }
         .footer-col { min-width: 0; }
@@ -404,6 +480,8 @@
             .action-buttons { grid-template-columns: 1fr; }
             .stats-grid { grid-template-columns: repeat(2, 1fr); }
             .tips-grid { grid-template-columns: 1fr; }
+            .how-to-use-steps { grid-template-columns: 1fr; }
+            .entropy-preview { grid-template-columns: repeat(2, 1fr); }
             .footer-unified-grid { grid-template-columns: 1fr; gap: var(--footer-gap); }
             .footer-col { text-align: left; }
         }
@@ -505,8 +583,8 @@
             <button class="btn-primary-large" onclick="document.getElementById('generator-tool').scrollIntoView({behavior: 'smooth'})">
                 <i data-lucide="key"></i> Generate Password
             </button>
-            <button class="btn-secondary-large" onclick="document.getElementById('why-choose').scrollIntoView({behavior: 'smooth'})">
-                <i data-lucide="info"></i> Learn More
+            <button class="btn-secondary-large" onclick="document.getElementById('how-to-use').scrollIntoView({behavior: 'smooth'})">
+                <i data-lucide="book-open"></i> How to Use
             </button>
         </div>
     </div>
@@ -566,6 +644,105 @@
 
 <!-- ENHANCED SEO CONTENT -->
 <div class="seo-content" id="why-choose">
+    <!-- HOW TO USE SECTION - ADVANCED -->
+    <div class="seo-section" id="how-to-use">
+        <h2>How to Use Password Generator</h2>
+        <p style="font-size: 1.1rem; margin-bottom: var(--spacing-xl);">Master the art of creating uncrackable passwords in three simple steps. Our advanced generator gives you complete control over password complexity and security.</p>
+        
+        <div class="how-to-use-steps">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <i data-lucide="sliders" class="step-icon"></i>
+                <h4>Configure Settings</h4>
+                <p>Choose password length (6-100 characters) using the slider. Select character types: uppercase (A-Z), lowercase (a-z), numbers (0-9), and symbols (!@#$%^&*).</p>
+                <div class="step-tip">💡 Pro Tip: Use 16+ characters for maximum security</div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <i data-lucide="settings-2" class="step-icon"></i>
+                <h4>Advanced Options</h4>
+                <p>Enable "Exclude Similar" to remove confusing characters (i, l, 1, O, 0). Turn on "Strict Distribution" to ensure at least one character from each selected set.</p>
+                <div class="step-tip">💡 Pro Tip: Add custom symbols in the extra field for unique requirements</div>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <i data-lucide="download" class="step-icon"></i>
+                <h4>Generate & Save</h4>
+                <p>Click "Generate" to create a new password. Use "Copy" to save to clipboard, or "Download" to save as a secure text file. Generate multiple times for best results.</p>
+                <div class="step-tip">💡 Pro Tip: Never store passwords in plain text — use a password manager</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Advanced Features Section - STACKED (LINE BY LINE) -->
+    <div class="seo-section">
+        <h2>Advanced Password Generation Features</h2>
+        <div class="advanced-features-stack">
+            <div class="advanced-card">
+                <h4><i data-lucide="cpu"></i> Cryptographic Randomness</h4>
+                <p>Our generator uses the Web Crypto API's cryptographically secure pseudo-random number generator (CSPRNG). This is the same technology used by banks and governments, ensuring true randomness that cannot be predicted or replicated.</p>
+            </div>
+            <div class="advanced-card">
+                <h4><i data-lucide="eye-off"></i> Zero-Knowledge Architecture</h4>
+                <p>100% client-side generation means your passwords never leave your browser. No server requests, no database storage, no tracking. Your passwords exist only on your device — we never see them, store them, or transmit them.</p>
+            </div>
+            <div class="advanced-card">
+                <h4><i data-lucide="ruler"></i> Entropy Optimization</h4>
+                <p>Each password is generated with maximum possible entropy based on your settings. A 20-character password with all character sets has approximately 131 bits of entropy — mathematically impossible to brute-force with current technology.</p>
+            </div>
+            <div class="advanced-card">
+                <h4><i data-lucide="shield"></i> Strict Policy Compliance</h4>
+                <p>Our generator supports strict distribution modes that ensure compliance with complex password policies. Guarantee at least one uppercase, lowercase, number, and symbol in every password when required.</p>
+            </div>
+            <div class="advanced-card">
+                <h4><i data-lucide="wifi-off"></i> Full Offline Support</h4>
+                <p>Once the page loads, you can disconnect from the internet entirely. The generator works perfectly offline — ideal for air-gapped systems and maximum security environments.</p>
+            </div>
+            <div class="advanced-card">
+                <h4><i data-lucide="type"></i> Custom Character Sets</h4>
+                <p>Need to exclude specific characters or add custom symbols? Our custom character field lets you define exactly which symbols to include, perfect for services with unique password requirements.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Password Strength Formula -->
+    <div class="seo-section">
+        <h2>The Mathematics of Password Strength</h2>
+        <div class="formula-box">
+            <h4><i data-lucide="calculator"></i> Password Entropy Formula</h4>
+            <div class="formula-content">
+                <span class="formula-highlight">E = L × log₂(R)</span><br><br>
+                <strong>Where:</strong><br>
+                • <span class="formula-highlight">E</span> = Entropy in bits (higher is stronger)<br>
+                • <span class="formula-highlight">L</span> = Password length (characters)<br>
+                • <span class="formula-highlight">R</span> = Character pool size (possible characters)<br><br>
+                <strong>Example Calculation:</strong><br>
+                16-character password using all sets (94 characters)<br>
+                E = 16 × log₂(94) = 16 × 6.55 = <span class="formula-highlight">104.8 bits entropy</span><br><br>
+                <span style="color: #2e7d5e;">✓ 104.8 bits requires 2.4 × 10³¹ attempts — impossible to crack</span>
+            </div>
+        </div>
+        
+        <div class="entropy-preview">
+            <div class="entropy-item">
+                <div class="entropy-value">26</div>
+                <div class="entropy-label">Lowercase (a-z)</div>
+            </div>
+            <div class="entropy-item">
+                <div class="entropy-value">52</div>
+                <div class="entropy-label">Letters (A-Z, a-z)</div>
+            </div>
+            <div class="entropy-item">
+                <div class="entropy-value">62</div>
+                <div class="entropy-label">+ Numbers (0-9)</div>
+            </div>
+            <div class="entropy-item">
+                <div class="entropy-value">94</div>
+                <div class="entropy-label">+ Symbols (Full Set)</div>
+            </div>
+        </div>
+    </div>
+
     <!-- Why Choose Section with Stats -->
     <div class="seo-section">
         <h2>Why Choose Our Password Generator?</h2>
@@ -603,22 +780,22 @@
             <div class="mistake-card">
                 <i data-lucide="alert-triangle"></i>
                 <h4>Using Personal Information</h4>
-                <p>Never use names, birthdays, addresses, or pet names. This information is often publicly available or easy to guess.</p>
+                <p>Never use names, birthdays, addresses, or pet names. This information is often publicly available or easy to guess through social media and data breaches.</p>
             </div>
             <div class="mistake-card">
                 <i data-lucide="repeat"></i>
                 <h4>Reusing Passwords</h4>
-                <p>Using the same password across multiple sites is extremely dangerous. One breach compromises all your accounts.</p>
+                <p>Using the same password across multiple sites is extremely dangerous. One breach compromises all your accounts. Use unique passwords for every service.</p>
             </div>
             <div class="mistake-card">
                 <i data-lucide="keyboard"></i>
                 <h4>Keyboard Patterns</h4>
-                <p>Avoid sequences like "qwerty", "123456", or "asdfgh". These are among the first guesses in any attack.</p>
+                <p>Avoid sequences like "qwerty", "123456", or "asdfgh". These are among the first guesses in any attack and are included in every password cracking dictionary.</p>
             </div>
             <div class="mistake-card">
                 <i data-lucide="book-open"></i>
                 <h4>Dictionary Words</h4>
-                <p>Common words, even with substitutions (e.g., "p@ssw0rd"), are vulnerable to dictionary attacks.</p>
+                <p>Common words, even with character substitutions (e.g., "p@ssw0rd", "adm1n"), are vulnerable to dictionary attacks that try millions of variations per second.</p>
             </div>
         </div>
     </div>
@@ -628,12 +805,13 @@
         <h2>Password Security Best Practices</h2>
         <div class="practices-list">
             <ul>
-                <li><strong>Use a password manager</strong> — It generates, stores, and autofills strong unique passwords for every site.</li>
-                <li><strong>Enable two-factor authentication (2FA)</strong> — Adds an extra layer of security even if your password is compromised.</li>
-                <li><strong>Change passwords after a breach</strong> — If a service you use announces a breach, change your password immediately.</li>
-                <li><strong>Use at least 16 characters</strong> — Longer passwords are exponentially harder to crack.</li>
-                <li><strong>Never share passwords</strong> — Keep your credentials private; legitimate services will never ask for your password.</li>
-                <li><strong>Check password strength regularly</strong> — Use our Password Strength Checker to verify your passwords are robust.</li>
+                <li><strong>Use a password manager</strong> — It generates, stores, and autofills strong unique passwords for every site. Recommended: Bitwarden, 1Password, KeePass.</li>
+                <li><strong>Enable two-factor authentication (2FA)</strong> — Adds an extra layer of security even if your password is compromised. Use authenticator apps over SMS.</li>
+                <li><strong>Change passwords after a breach</strong> — If a service you use announces a breach, change your password immediately. Check haveibeenpwned.com regularly.</li>
+                <li><strong>Use at least 16 characters</strong> — Longer passwords are exponentially harder to crack. Each additional character multiplies the possible combinations by the character set size.</li>
+                <li><strong>Never share passwords</strong> — Keep your credentials private; legitimate services will never ask for your password via email or phone.</li>
+                <li><strong>Check password strength regularly</strong> — Use our Password Strength Checker to verify your passwords are robust against modern cracking techniques.</li>
+                <li><strong>Avoid password hints</strong> — Security questions and password hints are often easier to guess than the password itself.</li>
             </ul>
         </div>
     </div>
@@ -645,17 +823,17 @@
             <div class="tip-card">
                 <i data-lucide="ruler"></i>
                 <h4>Use Sufficient Length</h4>
-                <p>Minimum 16 characters for strong security. Each additional character makes your password exponentially harder to crack.</p>
+                <p>Minimum 16 characters for strong security. Each additional character makes your password exponentially harder to crack. For critical accounts, use 20+ characters.</p>
             </div>
             <div class="tip-card">
                 <i data-lucide="shuffle"></i>
                 <h4>Mix Character Types</h4>
-                <p>Include uppercase, lowercase, numbers, and symbols. Avoid dictionary words and personal information.</p>
+                <p>Include uppercase, lowercase, numbers, and symbols. Avoid dictionary words and personal information. Random generation is always stronger than human-created patterns.</p>
             </div>
             <div class="tip-card">
                 <i data-lucide="key"></i>
                 <h4>Never Reuse Passwords</h4>
-                <p>Each account needs a unique password. Use a password manager to store generated passwords securely.</p>
+                <p>Each account needs a unique password. Credential stuffing attacks use breached passwords to access other accounts. Use a password manager to stay organized.</p>
             </div>
         </div>
     </div>
@@ -666,13 +844,15 @@
         <div class="nist-box">
             <h4>National Institute of Standards and Technology Recommendations</h4>
             <ul>
-                <li>Minimum 8 characters, but 15+ is strongly recommended</li>
-                <li>Support up to 64 characters or more</li>
-                <li>Allow all printable ASCII characters including spaces</li>
-                <li>Check passwords against breached password lists</li>
+                <li>Minimum 8 characters, but 15+ is strongly recommended for all accounts</li>
+                <li>Support up to 64 characters or more — longer is always better</li>
+                <li>Allow all printable ASCII characters including spaces and Unicode</li>
+                <li>Check passwords against known breached password lists</li>
                 <li>Encourage use of password managers with built-in generators</li>
+                <li>Eliminate periodic password change requirements — only change if compromised</li>
+                <li>Remove composition rules — let users choose any characters</li>
             </ul>
-            <p style="margin-top:var(--spacing-md); margin-bottom:0;"><strong>Password Generator</strong> exceeds all NIST requirements with support for up to 100 characters and cryptographically secure random generation.</p>
+            <p style="margin-top:var(--spacing-md); margin-bottom:0;"><strong>Password Generator</strong> exceeds all NIST requirements with support for up to 100 characters, full ASCII character sets, and cryptographically secure random generation that never transmits data.</p>
         </div>
     </div>
 
@@ -682,27 +862,31 @@
         <div class="faq-stack">
             <div class="faq-card" onclick="toggleFaqCard(this)">
                 <div class="faq-question">Is Password Generator safe to use? <i data-lucide="chevron-down" class="faq-icon"></i></div>
-                <div class="faq-answer">Yes. Password Generator runs entirely in your browser using the Web Crypto API. No passwords are ever sent to any server. All generation happens locally on your device. We don't store, track, or share any data.</div>
+                <div class="faq-answer">Yes. Password Generator runs entirely in your browser using the Web Crypto API. No passwords are ever sent to any server. All generation happens locally on your device. We don't store, track, or share any data. You can even disconnect from the internet after loading the page.</div>
             </div>
             <div class="faq-card" onclick="toggleFaqCard(this)">
                 <div class="faq-question">What password length should I use? <i data-lucide="chevron-down" class="faq-icon"></i></div>
-                <div class="faq-answer">For most accounts, 16-20 characters is recommended. Email and banking accounts should use 20+ characters. Use the maximum length allowed by each service. Password Generator supports up to 100 characters.</div>
+                <div class="faq-answer">For most accounts, 16-20 characters is recommended. Email and banking accounts should use 20+ characters. Social media: 16+ characters. Password manager master password: 25+ characters. Use the maximum length allowed by each service. Password Generator supports up to 100 characters.</div>
             </div>
             <div class="faq-card" onclick="toggleFaqCard(this)">
                 <div class="faq-question">What is strict distribution? <i data-lucide="chevron-down" class="faq-icon"></i></div>
-                <div class="faq-answer">Strict distribution ensures the password contains at least one character from each selected character set. This meets strict password policies that require mixed character types.</div>
+                <div class="faq-answer">Strict distribution ensures the password contains at least one character from each selected character set (uppercase, lowercase, numbers, symbols). This meets strict password policies that require mixed character types. Our algorithm guarantees compliance while maintaining randomness.</div>
             </div>
             <div class="faq-card" onclick="toggleFaqCard(this)">
                 <div class="faq-question">Can I use this tool offline? <i data-lucide="chevron-down" class="faq-icon"></i></div>
-                <div class="faq-answer">Yes. Once the page loads, Password Generator works completely offline. You can disconnect from the internet and still generate secure passwords.</div>
+                <div class="faq-answer">Yes. Once the page loads, Password Generator works completely offline. You can disconnect from the internet and still generate secure passwords. This makes it ideal for air-gapped systems and maximum security environments.</div>
             </div>
             <div class="faq-card" onclick="toggleFaqCard(this)">
                 <div class="faq-question">How does the entropy calculation work? <i data-lucide="chevron-down" class="faq-icon"></i></div>
-                <div class="faq-answer">Entropy measures password randomness in bits. Higher entropy means stronger passwords. Our generator uses cryptographically secure random values to maximize entropy.</div>
+                <div class="faq-answer">Entropy measures password randomness in bits using the formula E = L × log₂(R). Higher entropy means stronger passwords. Our generator uses cryptographically secure random values to maximize entropy. A 16-character password with all sets has ~104 bits of entropy — impossible to crack with current technology.</div>
             </div>
             <div class="faq-card" onclick="toggleFaqCard(this)">
                 <div class="faq-question">Is this tool really free? <i data-lucide="chevron-down" class="faq-icon"></i></div>
-                <div class="faq-answer">Absolutely! Password Generator is 100% free with no hidden costs, no subscriptions, and no premium tiers. We believe everyone deserves strong password security.</div>
+                <div class="faq-answer">Absolutely! Password Generator is 100% free with no hidden costs, no subscriptions, and no premium tiers. We believe everyone deserves strong password security regardless of budget. No ads, no tracking, no data collection — just secure passwords.</div>
+            </div>
+            <div class="faq-card" onclick="toggleFaqCard(this)">
+                <div class="faq-question">What makes a password "strong"? <i data-lucide="chevron-down" class="faq-icon"></i></div>
+                <div class="faq-answer">A strong password has three key characteristics: 1) Length (16+ characters), 2) Complexity (mixed character types), and 3) Unpredictability (truly random generation, not human-created). Our generator optimizes all three factors to create passwords that are mathematically impossible to crack.</div>
             </div>
         </div>
     </div>
@@ -712,6 +896,7 @@
 <footer>
     <div class="footer-container">
         <div class="footer-unified-grid">
+            <!-- Column 1: Brand -->
             <div class="footer-col">
                 <div class="footer-brand-compact">
                     <div class="footer-brand-header">
@@ -732,28 +917,28 @@
                     <p>Professional free online password generator. Create secure, random, and private keys instantly. 100% client-side security.</p>
                 </div>
             </div>
+            <!-- Column 2: Quick Links -->
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul><li><a href="/">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/support.html">Support</a></li></ul>
             </div>
+            <!-- Column 3: Tools -->
             <div class="footer-col">
                 <h4>Tools</h4>
                 <ul><li><a href="password-generator.html">Password Generator</a></li><li><a href="password-checker.html">Strength Checker</a></li><li><a href="entropy-calculator.html">Entropy Calculator</a></li></ul>
             </div>
-            <div class="footer-col">
-                <h4>Resources</h4>
-                <ul><li><a href="/blog.html">Blog</a></li></ul>
-            </div>
+            <!-- Column 4: Legal -->
             <div class="footer-col">
                 <h4>Legal</h4>
-                <ul><li><a href="/disclaimer.html">Disclaimer</a></li><li><a href="/privacy-policy.html">Privacy Policy</a></li><li><a href="/terms-of-use.html">Terms of Use</a></li></ul>
+                <ul><li><a href="/disclaimer.html">Disclaimer</a></li><li><a href="/privacy.html">Privacy Policy</a></li><li><a href="/terms.html">Terms of Use</a></li></ul>
             </div>
+            <!-- Column 5: Share -->
             <div class="footer-col footer-share-compact" onclick="shareWebsite()">
                 <div class="footer-share-header"><i data-lucide="share-2"></i><span class="footer-share-title">Share Us On</span></div>
                 <div class="footer-share-subtitle">Share with friends and family — help them stay secure online with strong passwords.</div>
             </div>
         </div>
-        <div class="footer-copyright">© password.pandacybercafe.in • All rights reserved</div>
+        <div class="footer-copyright">© www.password.pandacybercafe.in • All rights reserved</div>
     </div>
 </footer>
 </div>
@@ -832,8 +1017,8 @@
         window.downloadPassword = function(){ 
             const pw = passwordOutput.innerText; 
             if(pw && pw!=='Select options' && pw!=='················'){ 
-                const content = `Password Generator\nPassword: ${pw}\nLength: ${pw.length} characters`;
-                const b = new Blob([content], {type:'text/plain'}); const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = `password_${Date.now()}.txt`; a.click(); URL.revokeObjectURL(a.href); showToast('✓ Downloaded!', 'success');
+                const content = `Password Generator\nGenerated: ${new Date().toLocaleString()}\nPassword: ${pw}\nLength: ${pw.length} characters\nEntropy: ~${Math.round(pw.length * Math.log2(charset?.length || 94))} bits`;
+                const b = new Blob([content], {type:'text/plain'}); const a = document.createElement('a'); a.href = URL.createObjectURL(b); a.download = `secure_password_${Date.now()}.txt`; a.click(); URL.revokeObjectURL(a.href); showToast('✓ Downloaded!', 'success');
             } else showToast('⚠ No password', 'info');
         };
         window.onload=()=>{ generatePassword(); refreshIcons(); };
