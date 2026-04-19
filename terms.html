@@ -188,6 +188,15 @@
         }
         .back-link:hover { color: #333; gap: 10px; }
         .content-block { margin-bottom: 45px; }
+        
+        .terms-note {
+            background: #eff6ff; border-left: 5px solid #3b82f6;
+            padding: 20px 25px; border-radius: 12px; margin: 30px 0;
+        }
+        .info-box {
+            background: #f8fafc; border-left: 4px solid #000;
+            padding: 20px; border-radius: 12px; margin: 25px 0;
+        }
 
         /* ========== FOOTER - BLACK (AUTO-FIT GRID) ========== */
         footer { background: #000000; color: #ffffff; padding: var(--spacing-2xl) 0 var(--spacing-xl); margin-top: 70px; }
@@ -247,6 +256,7 @@
             .desktop-tool-links { display: none; }
             .menu-icon-btn { display: flex; }
             .header-top { padding: var(--spacing-sm) var(--spacing-lg); }
+            .terms-note { padding: 16px 18px; }
         }
         @media (max-width: 480px) {
             .container { padding: 0 15px; }
@@ -318,32 +328,111 @@
 </header>
 
 <main class="container">
+    <!-- Updated "Back to Home" link -->
     <a href="/" class="back-link">
-        <i data-lucide="arrow-left" size="18"></i> Back to Password Generator
+        <i data-lucide="arrow-left" size="18"></i> Back to Home
     </a>
     
     <h1>Terms of Use</h1>
     
     <div class="content-block">
         <p><strong>Last Updated: April 2026</strong></p>
-        <p>Please read these Terms of Use carefully before using the Password Generator website.</p>
+        
+        <div class="terms-note">
+            <strong>📋 Agreement Overview:</strong> By accessing or using Password Generator (the "Service"), you agree to be bound by these Terms of Use. If you disagree with any part of the terms, please discontinue use of the website immediately.
+        </div>
+        
+        <p>Please read these Terms of Use carefully before using the Password Generator website operated by us.</p>
         
         <h2>1. Acceptance of Terms</h2>
-        <p>By accessing or using Password Generator, you agree to be bound by these Terms.</p>
+        <p>By accessing or using Password Generator, you acknowledge that you have read, understood, and agree to be legally bound by these Terms of Use and our Privacy Policy. These terms apply to all visitors, users, and others who access or use the Service.</p>
+        
+        <!-- Added More Content: Why These Terms Matter -->
+        <div style="margin: 25px 0;">
+            <h3>Why We Have Terms of Use</h3>
+            <p>Terms of Use serve as a contract between you (the user) and us (the service provider). They protect both parties. For you, they clarify what you can expect from our free tool and outline your rights. For us, they establish the boundaries of acceptable use and limit our liability for how you choose to use the generated passwords. Since we provide a security tool, clear terms are essential to ensure everyone uses it responsibly.</p>
+        </div>
         
         <h2>2. Description of Service</h2>
-        <p>Password Generator is a free online tool that generates secure, random passwords using client-side cryptography. All processing occurs in your browser, and no data is stored on our servers.</p>
+        <p>Password Generator is a free online tool that generates secure, random passwords using client-side cryptography via the Web Crypto API. All processing occurs exclusively in your web browser, and no data is stored on our servers.</p>
+        <p><strong>Key Service Characteristics:</strong></p>
+        <ul>
+            <li><strong>Free of Charge:</strong> The Service is provided at no cost for personal and commercial use.</li>
+            <li><strong>No Registration Required:</strong> You do not need to create an account or provide personal information to use the core password generation features.</li>
+            <li><strong>Client-Side Only:</strong> The security of the generation relies on your browser's cryptographic implementation. We do not transmit or store generated passwords.</li>
+        </ul>
+        
+        <!-- Added More Content: Scope of Use -->
+        <div class="info-box">
+            <h3 style="margin-top: 0;">Scope of Permitted Use</h3>
+            <p>You may use Password Generator for any lawful purpose, including:</p>
+            <ul>
+                <li>Generating passwords for personal online accounts (email, social media, banking).</li>
+                <li>Generating passwords for professional or enterprise use (employee accounts, server credentials).</li>
+                <li>Educational purposes, such as demonstrating password entropy in a classroom setting.</li>
+                <li>Integration into security workflows and compliance audits.</li>
+            </ul>
+            <p>You may not use the Service for any illegal or unauthorized purpose, including generating credentials for accessing systems you do not own or have explicit permission to access.</p>
+        </div>
         
         <h2>3. User Responsibilities</h2>
-        <p>You are solely responsible for the passwords you generate and how you store them, maintaining the security of your accounts, and using the tool in compliance with applicable laws.</p>
+        <p>You are solely responsible for:</p>
+        <ul>
+            <li><strong>Password Storage:</strong> We do not store passwords. It is your responsibility to securely record and manage generated passwords using a reputable password manager or other secure means.</li>
+            <li><strong>Account Security:</strong> The strength of a password is only one component of account security. You are responsible for enabling Two-Factor Authentication (2FA) where available and maintaining the overall security of your devices.</li>
+            <li><strong>Compliance with Laws:</strong> You agree to use the Service in compliance with all applicable local, state, national, and international laws and regulations.</li>
+            <li><strong>Verification:</strong> You should verify that generated passwords meet the specific password policy requirements of the website or service where you intend to use them.</li>
+        </ul>
         
         <h2>4. Acceptable Use Policy</h2>
-        <p>While Password Generator is free to use, we require that you use it responsibly. You may not use automated scraping, generate passwords for illegal activities, or attempt to overload our infrastructure.</p>
+        <p>While Password Generator is free to use, we require that you use it responsibly. Prohibited activities include:</p>
+        <ul>
+            <li><strong>Automated Access:</strong> Using automated scripts, bots, or scrapers to generate excessive numbers of passwords in a way that degrades service for other users.</li>
+            <li><strong>Illegal Activities:</strong> Using generated passwords to access computer systems, networks, or data without authorization (hacking).</li>
+            <li><strong>Reverse Engineering:</strong> Attempting to decompile, reverse engineer, or extract the source code of the Service beyond what is publicly visible.</li>
+            <li><strong>Infrastructure Overload:</strong> Deliberately attempting to overload our servers with excessive requests (Denial of Service).</li>
+            <li><strong>Framing:</strong> Embedding the generator in an iframe on another website for commercial purposes without prior written permission.</li>
+        </ul>
+        <p>We reserve the right to block access to any user or IP address violating this Acceptable Use Policy.</p>
         
-        <h2>5. Limitation of Liability</h2>
-        <p>To the maximum extent permitted by applicable law, Password Generator and its operators shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from the use of our Service.</p>
+        <!-- Added More Content: Intellectual Property -->
+        <h2>5. Intellectual Property Rights</h2>
+        <p>The Service and its original content (excluding generated passwords, which are not our property), features, and functionality are and will remain the exclusive property of Password Generator and its licensors. The Service is protected by copyright, trademark, and other laws. Our trademarks and trade dress may not be used in connection with any product or service without prior written consent.</p>
+        <p><strong>User-Generated Passwords:</strong> The random strings generated by the tool are not considered our intellectual property. They are random data and you are free to use them as you see fit, subject to the terms herein.</p>
         
-        <h2>6. Contact Us</h2>
+        <h2>6. Disclaimer of Warranties</h2>
+        <p>The Service is provided on an "AS IS" and "AS AVAILABLE" basis. We make no warranties, expressed or implied, regarding:</p>
+        <ul>
+            <li>The absolute security or uncrackability of generated passwords against future technological advances.</li>
+            <li>The uninterrupted availability of the Service.</li>
+            <li>The compatibility of generated passwords with specific third-party websites or services.</li>
+        </ul>
+        
+        <h2>7. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by applicable law, Password Generator and its operators shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from:</p>
+        <ul>
+            <li>Your use or inability to use the Service.</li>
+            <li>Any unauthorized access to or use of our servers and/or any personal information stored therein (of which we store none).</li>
+            <li>Any bugs, viruses, or the like that may be transmitted to or through our Service by any third party.</li>
+            <li>Any errors or omissions in any content or for any loss or damage incurred as a result of the use of any content generated by the Service.</li>
+        </ul>
+        
+        <!-- Added More Content: Indemnification -->
+        <h2>8. Indemnification</h2>
+        <p>You agree to defend, indemnify, and hold harmless Password Generator and its operators, employees, contractors, and affiliates from and against any and all claims, damages, obligations, losses, liabilities, costs, or debt, and expenses (including but not limited to attorney's fees) arising from:</p>
+        <ul>
+            <li>Your use of and access to the Service.</li>
+            <li>Your violation of any term of these Terms of Use.</li>
+            <li>Your violation of any third-party right, including without limitation any copyright, property, or privacy right.</li>
+        </ul>
+        
+        <h2>9. Changes to Terms</h2>
+        <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will try to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion. By continuing to access or use our Service after those revisions become effective, you agree to be bound by the revised terms.</p>
+        
+        <h2>10. Governing Law</h2>
+        <p>These Terms shall be governed and construed in accordance with the laws of [Jurisdiction], without regard to its conflict of law provisions. Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights.</p>
+        
+        <h2>11. Contact Us</h2>
         <p>If you have any questions about these Terms, please contact us at <strong>legal@passwordgenerator.com</strong>.</p>
         
         <p><em>By using Password Generator, you acknowledge that you have read, understood, and agree to be bound by these Terms of Use.</em></p>
@@ -375,16 +464,14 @@
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
-                <ul><li><a href="/">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/support.html">Support</a></li></ul>
+                <!-- Support link removed -->
+                <ul><li><a href="/">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/contact.html">Contact</a></li></ul>
             </div>
             <div class="footer-col">
                 <h4>Tools</h4>
                 <ul><li><a href="password-generator.html">Password Generator</a></li><li><a href="password-checker.html">Strength Checker</a></li><li><a href="entropy-calculator.html">Entropy Calculator</a></li></ul>
             </div>
-            <div class="footer-col">
-                <h4>Resources</h4>
-                <ul><li><a href="/blog.html">Blog</a></li></ul>
-            </div>
+            <!-- "Resources" and "Blog" sections removed from footer -->
             <div class="footer-col">
                 <h4>Legal</h4>
                 <ul><li><a href="/disclaimer.html">Disclaimer</a></li><li><a href="/privacy-policy.html">Privacy Policy</a></li><li><a href="/terms-of-use.html">Terms of Use</a></li></ul>
