@@ -455,8 +455,9 @@
 </header>
 
 <main class="container">
+    <!-- Updated "Back to Home" link -->
     <a href="/" class="back-link">
-        <i data-lucide="arrow-left" size="18"></i> Back to Password Generator
+        <i data-lucide="arrow-left" size="18"></i> Back to Home
     </a>
     
     <h1>Password Entropy Calculator: Measure Your Password Strength</h1>
@@ -511,6 +512,13 @@
         </div>
     </div>
 
+    <!-- Added More Content Block: Why Entropy Matters -->
+    <div style="margin: 30px 0;">
+        <h3>Why Password Entropy Matters More Than Complexity Rules</h3>
+        <p>Many websites enforce outdated complexity rules like "must contain one uppercase, one number, and one symbol." While these rules increase the character set slightly, they often lead to predictable human patterns like "Password123!" which has very low actual entropy.</p>
+        <p>The entropy calculator measures the *unpredictability* of your password, not just whether it checks certain boxes. A long passphrase like "correct horse battery staple" has significantly higher entropy than a short, complex password like "P@ssw0rd" despite the latter appearing "stronger" to many basic checkers.</p>
+    </div>
+
     <div class="stats-grid">
         <div class="stat-card"><div class="stat-number">81%</div><div class="stat-label">Data breaches involve weak passwords</div></div>
         <div class="stat-card"><div class="stat-number">128+</div><div class="stat-label">Bits needed for military-grade security</div></div>
@@ -533,6 +541,19 @@
         <li><strong>Special symbols (!@#$%^&* etc.):</strong> 32 characters → 5 bits per character</li>
         <li><strong>Full ASCII printable set:</strong> 94 characters → 6.55 bits per character</li>
     </ul>
+
+    <!-- Added More Content Block: Length vs. Complexity -->
+    <div style="margin: 30px 0; background: #f3f4f6; padding: 20px; border-radius: 12px;">
+        <h3 style="margin-top: 0;">The Power of Length: A Practical Example</h3>
+        <p>Let's compare two passwords to see entropy in action:</p>
+        <ul>
+            <li><strong>Password 1:</strong> <code>X9$kL2</code> (8 characters, uses lowercase, uppercase, numbers, symbols).<br>
+            Character Set: 94 | Entropy: log₂(94) × 8 ≈ <strong>52.4 bits</strong> (Weak - crackable in minutes/hours)</li>
+            <li><strong>Password 2:</strong> <code>BlueSkyJumpsOverRiver</code> (22 characters, lowercase only).<br>
+            Character Set: 26 | Entropy: log₂(26) × 22 ≈ <strong>103.4 bits</strong> (Very Strong - millions of years to crack)</li>
+        </ul>
+        <p>As you can see, the simple, longer phrase is vastly more secure than the short, complex jumble. Our calculator helps you visualize this trade-off in real-time.</p>
+    </div>
 
     <h2>Entropy Strength Levels and Recommendations</h2>
     <div class="entropy-table">
@@ -589,16 +610,14 @@
             </div>
             <div class="footer-col">
                 <h4>Quick Links</h4>
-                <ul><li><a href="/">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/contact.html">Contact</a></li><li><a href="/support.html">Support</a></li></ul>
+                <!-- Support link removed -->
+                <ul><li><a href="/">Home</a></li><li><a href="/about.html">About Us</a></li><li><a href="/contact.html">Contact</a></li></ul>
             </div>
             <div class="footer-col">
                 <h4>Tools</h4>
                 <ul><li><a href="password-generator.html">Password Generator</a></li><li><a href="password-checker.html">Strength Checker</a></li><li><a href="entropy-calculator.html">Entropy Calculator</a></li></ul>
             </div>
-            <div class="footer-col">
-                <h4>Resources</h4>
-                <ul><li><a href="/blog.html">Blog</a></li></ul>
-            </div>
+            <!-- "Resources" and "Blog" sections removed from footer -->
             <div class="footer-col">
                 <h4>Legal</h4>
                 <ul><li><a href="/disclaimer.html">Disclaimer</a></li><li><a href="/privacy-policy.html">Privacy Policy</a></li><li><a href="/terms-of-use.html">Terms of Use</a></li></ul>
